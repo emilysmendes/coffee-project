@@ -12,9 +12,7 @@ id {
 }
 .topRow {
     flex-direction: column;
-
 }
 .bottomRow {
     flex-direction: column;
-    align-self: end;
 }
