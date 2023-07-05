@@ -7,12 +7,27 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
-id {
-    display: none;
-}
+
 .topRow {
-    flex-direction: column;
+    /*flex-direction: column;*/
+    /*display: inline-flex;*/
 }
+
 .bottomRow {
-    flex-direction: column;
+    /*flex-direction: column;*/
 }
+
+#roast-selection, #roast-selection2 {
+    width: 100%;
+    display: block;
+}
+
+#submitBottomSearch, #submitTopSearch {
+    color: #fff;
+    text-align: center;
+    border-color: #1d7ee1;
+    background-color: #1E90FFFF;
+    margin: 15px 0px;
+    border-radius: 5px;
+}
+
