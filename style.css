@@ -7,3 +7,14 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+id {
+    display: none;
+}
+.topRow {
+    flex-direction: column;
+
+}
+.bottomRow {
+    flex-direction: column;
+    align-self: end;
+}
