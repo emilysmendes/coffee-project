@@ -24,15 +24,16 @@ function updateCoffees(e) {
     var nameSelection = searchCoffeeName.value
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast && nameSelection.includes(coffee.name.toLowerCase())) {
+        if (coffee.roast === selectedRoast && coffee.name.toLowerCase().includes(nameSelection.toLowerCase())) {
             filteredCoffees.push(coffee);
-        } else if (nameSelection.includes(coffee.name.toLowerCase()) && selectedRoast === 'all'){
+        } else if (nameSelection.includes(coffee.name.toLowerCase()) && selectedRoast === 'all') {
             filteredCoffees.push(coffee);
-        } else if (selectedRoast === 'all' && nameSelection.includes(coffee.name.toLowerCase())){
+        } else if (selectedRoast === 'all' || coffee.roast === selectedRoast){
             filteredCoffees.push(coffee);
         }
     });
     body.innerHTML = renderCoffees(filteredCoffees);
+    console.log(nameSelection)
 }
 
 
