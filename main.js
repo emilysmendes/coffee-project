@@ -1,11 +1,18 @@
 "use strict"
 
+renderCoffees().addEventListener("keyup", (event) => {
+    if (event.isComposing || event.keyCode === 229) {
+        return;
+    }
+    // do something
+});
+
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
+    var html = '<div class="coffee">';
     // html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    html += '<h3>' + coffee.name + '</h3>';
+    html += '<p>' + coffee.roast + '</p>';
+    html += '</div>';
 
     return html;
 }
