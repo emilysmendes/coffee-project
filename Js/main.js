@@ -1,10 +1,10 @@
 "use strict"
 
 const userData = JSON.parse(localStorage.getItem('userNewCoffee'));
-console.log()
+console.log();
 
 function renderCoffee(coffee) {
-    var html = '<div class="coffee">';
+    var html = '<div class="coffee col-3">';
     // html += '<td>' + coffee.id + '</td>';
     html += '<h3>' + coffee.name + '</h3>';
     html += '<p>' + coffee.roast + '</p>';
@@ -52,7 +52,7 @@ function newCoffee (e) {
     }
     coffees.push(newCoffeeObj);
     body.innerHTML = renderCoffees(coffees);
-   localStorage.setItem('searchName', JSON.stringify(newCoffeeObj));
+    localStorage.setItem('searchName', JSON.stringify(newCoffeeObj));
 
 }
 

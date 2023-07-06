@@ -1,19 +1,31 @@
 :root {
     --headerFont: 'Cinzel', serif;
-    --primaryBodyFont: 'Lexend Peta Light', sans-serif;
-    --secondaryBodyFont: 'Lexend Peta Bold', sans-serif;
+    --bodyFont: 'Lexend Peta', sans-serif;
 }
 
 body {
-    background-image: url("assets/hogsmeade.jpeg");
+    background-image: url("../hogsmeade.jpeg");
+    background-position: center;
+    background-size: cover;
+    aspect-ratio: 2/1;
 }
 
 table {
     border-collapse: collapse;
     margin: 15px 0;
 }
-
-
+h1 {
+    font-family: var(--headerFont);
+    font-weight: bold;
+}
+h3 {
+    font-family: var(--bodyFont);
+    font-weight: bold;
+}
+p {
+    font-family: var(--bodyFont);
+    font-weight: lighter;
+}
 #roast-selection, #roast-selection2 {
     width: 100%;
     display: block;
@@ -28,3 +40,6 @@ table {
     border-radius: 5px;
 }
 
+.card {
+    max-width: 50rem;
+}
