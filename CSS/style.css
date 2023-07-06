@@ -2,24 +2,34 @@
     --headerFont: 'Cinzel', serif;
     --bodyFont: 'Lexend Peta', sans-serif;
 }
+header {
+    background-image: url("../assets/smoke.gif");
+    background-repeat: repeat;
+    background-size: cover;
+}
 
 body {
-    background-image: url("../hogsmeade.jpeg");
+    background-image: url("../assets/hogsmeade.jpeg");
     background-position: center;
     background-size: cover;
-    aspect-ratio: 2/1;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    font-family: var(--bodyFont);
+}
+
+#header-box {
+    /*background-color: #000000;*/
 }
 
 h1 {
     font-family: var(--headerFont);
     font-weight: bold;
 }
-h3 {
-    font-family: var(--bodyFont);
+h3, h4, h2, {
     font-weight: bold;
 }
-p {
-    font-family: var(--bodyFont);
+p, li, .form-control {
     font-weight: lighter;
 }
 #roast-selection, #roast-selection2 {
@@ -30,10 +40,14 @@ p {
 #submitBottomSearch, #submitTopSearch {
     color: #fff;
     text-align: center;
-    border-color: mediumorchid;
-    background-color: mediumorchid;
-    margin: 15px 0px;
+    background-image: url("../assets/smoke background.jpg");
+    background-position: center;
+    background-size:cover;
     border-radius: 5px;
+    margin: 15px 0px;
+    border: none;
+    background-repeat: no-repeat;
+    aspect-ratio: 12/1;
 }
 
 .card {

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Three Broomsticks Coffee Co.</title>
+    <link rel="icon" type="image/x-icon" href="./assets/Website Logo- small.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,15 +13,25 @@
 
 </head>
 <body>
-<div class="page-wrapper my-3">
-    <header class="container py-3">
-        <div class="row">
-            <h1 class="text-center">Three Broomstick Coffee Co.</h1>
+<div class="page-wrapper mb-3">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom" id="header-box">
+        <div>
+            <img src="assets/Website Logo-large .png" height="100" width="100"/>
         </div>
+        <div class=" mb-2 mb-md-0 justify-content-start mx-5">
+            <h1 class="text-center text-white">Three Broomsticks Coffee Co.</h1>
+        </div>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-end mb-md-0 mx-5">
+            <li><a href="#" class=" text-white px-2 ">Home</a></li>
+            <li><a href="#" class="text-white px-2">FAQs</a></li>
+            <li><a href="#" class="text-white px-2">About</a></li>
+        </ul>
+
     </header>
-    <div class="container d-flex flex-wrap">
-        <div class="topRow ">
-            <div class="row bg-dark bg-opacity-50 m-3 border rounded text-white" id= "coffees">
+    <div class="container">
+        <div class="topRow">
+            <div class="row bg-dark bg-opacity-50 m-3 border rounded text-white p-3 my-5" id= "coffees">
 <!--                This div holds our rendered coffee objects-->
             </div>
             <div class="row bottomRow ">
@@ -30,15 +41,15 @@ border rounded mx-5 text-white">
                     <h4>Roast</h4>
                     <form>
                         <label for="roast-selection"></label>
-                        <select id="roast-selection">
+                        <select class= "my-2" id="roast-selection">
                             <option>all</option>
                             <option>light</option>
                             <option>medium</option>
                             <option>dark</option>
                         </select>
                     </form>
-                    <label for="searchCoffeeName" class="form-label"><h4>Coffee Name</h4></label>
-                    <input type="text" class="form-control" id="searchCoffeeName" placeholder="Enter Coffee Name">
+                    <label for="searchCoffeeName" class="form-label my-2"><h4>Coffee Name</h4></label>
+                    <input type="text" class="form-control my-1" id="searchCoffeeName" placeholder="Enter Coffee Name">
                     <input id="submitTopSearch" type="submit">
                 </div>
                 <div class="col-5 card p-2 bg-dark bg-opacity-50
@@ -47,14 +58,14 @@ border rounded mx-5 text-white">
                     <h4>Roast</h4>
                     <form>
                         <label for="roast-selection2"></label>
-                        <select id="roast-selection2">
+                        <select class= "my-2" id="roast-selection2">
                             <option>light</option>
                             <option>medium</option>
                             <option>dark</option>
                         </select>
                     </form>
-                    <label for="searchName" class="form-label"><h4>Name</h4></label>
-                    <input type="text" class="form-control" id="searchName" placeholder="Enter New Coffee Name">
+                    <label for="searchName" class="form-label my-2"><h4>Name</h4></label>
+                    <input type="text" class="form-control my-1" id="searchName" placeholder="Enter New Coffee Name">
                     <input id="submitBottomSearch" type="submit">
                 </div>
             </div>
