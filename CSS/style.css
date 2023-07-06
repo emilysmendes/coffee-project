@@ -1,21 +1,18 @@
+:root {
+    --headerFont: 'Cinzel', serif;
+    --primaryBodyFont: 'Lexend Peta Light', sans-serif;
+    --secondaryBodyFont: 'Lexend Peta Bold', sans-serif;
+}
+
+body {
+    background-image: url("assets/hogsmeade.jpeg");
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
-
-.topRow {
-    /*flex-direction: column;*/
-    /*display: inline-flex;*/
-}
-
-.bottomRow {
-    /*flex-direction: column;*/
-}
 
 #roast-selection, #roast-selection2 {
     width: 100%;
