@@ -34,8 +34,8 @@ p {
 #submitBottomSearch, #submitTopSearch {
     color: #fff;
     text-align: center;
-    border-color: #1d7ee1;
-    background-color: #1E90FFFF;
+    border-color: darkolivegreen;
+    background-color: darkolivegreen;
     margin: 15px 0px;
     border-radius: 5px;
 }
