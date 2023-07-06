@@ -1,8 +1,5 @@
 "use strict"
 
-const userData = JSON.parse(localStorage.getItem('userNewCoffee'));
-console.log();
-
 function renderCoffee(coffee) {
     var html = '<div class="coffee col-3">';
     // html += '<td>' + coffee.id + '</td>';
@@ -20,6 +17,8 @@ function renderCoffees(coffees) {
     }
     return html;
 }
+
+// Used to filer the coffees array
 
 function updateCoffees(e) {
     var selectedRoast = roastSelection.value.toLowerCase()
@@ -41,6 +40,8 @@ function updateCoffees(e) {
         body.innerHTML = renderCoffees(filteredCoffees);
     }
 }
+
+// used to add new coffee (does not save after page reload)
 
 function newCoffee (e) {
     const roastSelection = document.querySelector("#roast-selection2").value

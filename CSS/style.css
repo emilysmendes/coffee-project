@@ -10,10 +10,6 @@ body {
     aspect-ratio: 2/1;
 }
 
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
-}
 h1 {
     font-family: var(--headerFont);
     font-weight: bold;
@@ -34,8 +30,8 @@ p {
 #submitBottomSearch, #submitTopSearch {
     color: #fff;
     text-align: center;
-    border-color: darkolivegreen;
-    background-color: darkolivegreen;
+    border-color: mediumorchid;
+    background-color: mediumorchid;
     margin: 15px 0px;
     border-radius: 5px;
 }
