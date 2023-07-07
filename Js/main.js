@@ -2,13 +2,22 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee col-3">';
-    // html += '<td>' + coffee.id + '</td>';
+    if (coffee.roast === 'light') {
+        html += '<img src="../assets/Light-unscreen.gif" class="coffee-pic">';
+    } else if (coffee.roast === 'medium') {
+        html += '<img src="../assets/medium-unscreen.gif" class="coffee-pic">';
+    } else if (coffee.roast === 'dark') {
+        html += '<img src ="../assets/dark-unscreen.gif" class="coffee-pic">';
+    }
     html += '<h3>' + coffee.name + '</h3>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
 }
+
+
+
 
 function renderCoffees(coffees) {
     var html = '';
