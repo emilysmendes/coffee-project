@@ -65,3 +65,8 @@ p, li, .form-control {
 h4 {
     margin-bottom: 0;
 }
+
+#about-us {
+    display: block;
+    margin: auto;
+}
