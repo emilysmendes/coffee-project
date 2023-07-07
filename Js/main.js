@@ -1,4 +1,28 @@
 "use strict"
+// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+var coffees = [
+    {id: 1, name: 'Felix Felicis', roast: 'light'},
+    {id: 2, name: 'Love Potion', roast: 'light'},
+    {id: 3, name: 'Revive Elixir', roast: 'light'},
+    {id: 4, name: 'Mandrake Restorative Potion', roast: 'medium'},
+    {id: 5, name: 'Truth Serum', roast: 'medium'},
+    {id: 6, name: 'Wolfsbane', roast: 'medium'},
+    {id: 7, name: 'Skele-Gro', roast: 'dark'},
+    {id: 8, name: 'Draught of Living Death', roast: 'dark'},
+    {id: 9, name: 'Murtlap Essence', roast: 'dark'},
+    {id: 10, name: 'Polyjuice Potion', roast: 'dark'},
+    {id: 11, name: 'Rat Tonic', roast: 'dark'},
+    {id: 12, name: 'Venomous Tentacula Juice', roast: 'dark'},
+    {id: 13, name: 'Veritaserum', roast: 'dark'},
+    {id: 14, name: 'Wiggenweld Potion', roast: 'dark'},
+];
+// to invoke the function ( to save the new coffee)
+(() => {
+    let localStorageItem = localStorage.getItem("storedCoffee");
+    if(localStorageItem){
+        coffees.push(JSON.parse(localStorageItem));
+    }
+})()
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee col-3">';
@@ -41,7 +65,7 @@ function updateCoffees(e) {
     }
 }
 
-// used to add new coffee (does not save after page reload)
+// used to add new coffee
 
 function newCoffee (e) {
     const roastSelection = document.querySelector("#roast-selection2").value
@@ -53,29 +77,10 @@ function newCoffee (e) {
     }
     coffees.push(newCoffeeObj);
     body.innerHTML = renderCoffees(coffees);
-    localStorage.setItem('searchName', JSON.stringify(newCoffeeObj));
-
+    let coffeeJSON = JSON.stringify(newCoffeeObj);
+    localStorage.setItem('storedCoffee', coffeeJSON);
 }
 
-
-
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-var coffees = [
-    {id: 1, name: 'Felix Felicis', roast: 'light'},
-    {id: 2, name: 'Love Potion', roast: 'light'},
-    {id: 3, name: 'Revive Elixir', roast: 'light'},
-    {id: 4, name: 'Mandrake Restorative Potion', roast: 'medium'},
-    {id: 5, name: 'Truth Serum', roast: 'medium'},
-    {id: 6, name: 'Wolfsbane', roast: 'medium'},
-    {id: 7, name: 'Skele-Gro', roast: 'dark'},
-    {id: 8, name: 'Draught of Living Death', roast: 'dark'},
-    {id: 9, name: 'Murtlap Essence', roast: 'dark'},
-    {id: 10, name: 'Polyjuice Potion', roast: 'dark'},
-    {id: 11, name: 'Rat Tonic', roast: 'dark'},
-    {id: 12, name: 'Venomous Tentacula Juice', roast: 'dark'},
-    {id: 13, name: 'Veritaserum', roast: 'dark'},
-    {id: 14, name: 'Wiggenweld Potion', roast: 'dark'},
-];
 
 
 var body = document.querySelector('#coffees');
