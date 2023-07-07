@@ -16,23 +16,31 @@ var coffees = [
     {id: 13, name: 'Veritaserum', roast: 'dark'},
     {id: 14, name: 'Wiggenweld Potion', roast: 'dark'},
 ];
-// to invoke the function ( to save the new coffee)
-(() => {
-    let localStorageItem = localStorage.getItem("storedCoffee");
-    if(localStorageItem){
-        coffees.push(JSON.parse(localStorageItem));
-    }
-})()
+
+    // to invoke the function ( to save the new coffee)
+    (() => {
+        let localStorageItem = localStorage.getItem("storedCoffee");
+        if(localStorageItem){
+            coffees.push(JSON.parse(localStorageItem));
+        }
+    })()
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee col-3">';
-    // html += '<td>' + coffee.id + '</td>';
+    if (coffee.roast === 'light') {
+        html += '<img src="../assets/Light-unscreen.gif" class="coffee-pic">';
+    } else if (coffee.roast === 'medium') {
+        html += '<img src="../assets/medium-unscreen.gif" class="coffee-pic">';
+    } else if (coffee.roast === 'dark') {
+        html += '<img src ="../assets/dark-unscreen.gif" class="coffee-pic">';
+    }
     html += '<h3>' + coffee.name + '</h3>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
 }
+
 
 function renderCoffees(coffees) {
     var html = '';
@@ -65,7 +73,7 @@ function updateCoffees(e) {
     }
 }
 
-// used to add new coffee
+// used to add new coffee (does not save after page reload)
 
 function newCoffee (e) {
     const roastSelection = document.querySelector("#roast-selection2").value
@@ -80,6 +88,8 @@ function newCoffee (e) {
     let coffeeJSON = JSON.stringify(newCoffeeObj);
     localStorage.setItem('storedCoffee', coffeeJSON);
 }
+
+
 
 
 

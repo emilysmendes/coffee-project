@@ -18,8 +18,12 @@ body {
     font-family: var(--bodyFont);
 }
 
-#header-box {
-    /*background-color: #000000;*/
+.coffee-pic {
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+    background-repeat: repeat;
+    align-self: center;
 }
 
 h1 {
@@ -40,7 +44,7 @@ p, li, .form-control {
 #submitBottomSearch, #submitTopSearch {
     color: #fff;
     text-align: center;
-    background-image: url("../assets/smoke background.jpg");
+    background-image: url("../assets/grey smoke.jpeg");
     background-position: center;
     background-size:cover;
     border-radius: 5px;
@@ -52,4 +56,12 @@ p, li, .form-control {
 
 .card {
     max-width: 50rem;
+}
+
+.card-header {
+    margin-bottom: 15px;
+}
+
+h4 {
+    margin-bottom: 0;
 }
