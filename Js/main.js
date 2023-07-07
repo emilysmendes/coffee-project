@@ -21,7 +21,7 @@ var coffees = [
     (() => {
         let localStorageItem = localStorage.getItem("storedCoffee");
         if(localStorageItem){
-            coffees.push(JSON.parse(localStorageItem));
+           coffees.push(JSON.parse(localStorageItem));
         }
     })()
 
