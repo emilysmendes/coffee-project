@@ -30,7 +30,7 @@ h1 {
     font-family: var(--headerFont);
     font-weight: bold;
 }
-h3, h4, h2, {
+h3, h4, h2 {
     font-weight: bold;
 }
 p, li, .form-control {
