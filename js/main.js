@@ -28,11 +28,11 @@ var coffees = [
 function renderCoffee(coffee) {
     var html = '<div class="coffee col-3">';
     if (coffee.roast === 'light') {
-        html += '<img src="../assets/light-unscreen.gif" class="coffee-pic">';
+        html += '<img src="assets/light-unscreen.gif" class="coffee-pic">';
     } else if (coffee.roast === 'medium') {
-        html += '<img src="../assets/medium-unscreen.gif" class="coffee-pic">';
+        html += '<img src="assets/medium-unscreen.gif" class="coffee-pic">';
     } else if (coffee.roast === 'dark') {
-        html += '<img src ="../assets/dark-unscreen.gif" class="coffee-pic">';
+        html += '<img src ="assets/dark-unscreen.gif" class="coffee-pic">';
     }
     html += '<h3>' + coffee.name + '</h3>';
     html += '<p>' + coffee.roast + '</p>';
